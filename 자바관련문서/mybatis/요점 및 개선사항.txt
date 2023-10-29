@@ -2,10 +2,10 @@
 
 1. @GetMapping에는 @RequestBody를 사용할 수 없다.
 
-2.(@PathVariable("id") int id)   ---------cf)vue : this.$route.params.id(r안붙는다)
+2.(@PathVariable("id") int id)   ---------cf)vue : this.$route.params.id(r안붙는다)  참조site https://hello-bryan.tistory.com/274
    PathVariable http://localhost:8090/api/city/2
 
---r이 더 붙었다
+--r이 더 붙었다   
 this.$router.push({
         path: `/board/detail/${item.content_id}`
       })
