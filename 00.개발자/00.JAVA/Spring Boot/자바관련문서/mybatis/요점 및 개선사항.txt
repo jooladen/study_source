@@ -1,0 +1,70 @@
+**Spring Boot + Mybatis
+
+1. @GetMapping에는 @RequestBody를 사용할 수 없다.
+
+2.(@PathVariable("id") int id)   ---------cf)vue : this.$route.params.id(r안붙는다)  참조site https://hello-bryan.tistory.com/274
+   PathVariable http://localhost:8090/api/city/2
+
+--r이 더 붙었다   
+this.$router.push({
+        path: `/board/detail/${item.content_id}`
+      })
+
+3.(@RequestParam(value = "cityName", required = true) String cityName) -----cf)vue : this.$route.query.city
+   http://localhost:8090/api/city?cityName=부산
+
+4. 기본 쿼리 로그
+  logging.level.com.niceinfoshop.spring.mapper.CityMapper=TRACE > DEBUG
+  
+5.mybatis many  
+
+6. dto, model, domain, entity(jpa) 다 비슷한 의미이다
+
+7. mapper, dao 다 비슷한 의미이다.
+
+**공부할 내용
+1.
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): org.spring.springboot2.dao.CityDao.findCityByName
+
+2.@Mapper와 @MapperScan    
+
+3.복사시 
+src/main/resources/mapper에
+dao 또는 mapper의 Interface와 똑같이
+만들어줘야 한다
+<mapper namespace="org.spring.springboot2.dao.CityDao">
+
+**개선할 점
+postman insert후 1말고 값 볼려면?
+
+logback log4jdbc
+
+이클립스에서 쿼리 바로 실행
+Data Source Explorer
+
+
+아래는 소스가 날라가는 바람에 실 폴더와 다르니 참조만
+
+**src 폴더별 기능 
+1. springboot 
+controller - service - serviceImpl - dao 
+
+2. springboot2 
+controller - service - serviceImpl - dao 
+**1의 복사시 변경되는 점
+cf)https://twofootdog.github.io/Spring-DAO%EC%99%80-Mapper%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%A0%90/
+
+3.springboot3
+dao를 mapper방식으로 변경
+(mybatis3.0에서 도입된 개선된 방식이라고 한다)
+controller - service - mapper
+**1.2.3.은 동일 프로젝트
+
+4.springboot1
+controller - service - mapper
+
+
+
+
+
+

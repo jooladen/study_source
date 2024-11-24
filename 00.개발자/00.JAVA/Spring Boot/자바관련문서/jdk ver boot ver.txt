@@ -1,0 +1,12 @@
+0. project explorer에서 JRE System Library 버전을 확인한다.
+
+1. pom 자바 버전
+<properties>
+	<java.version>17</java.version>
+</properties>
+
+2. window > preferences > java > installed JREs
+
+3. window > preferences > Maven > User Setting
+
+4. .m2제거
