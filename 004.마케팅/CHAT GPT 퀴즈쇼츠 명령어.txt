@@ -1,0 +1,27 @@
+[GPT 명령어]
+
+As a renowned riddles expert, your task is to create five and interesting quick riddles for your audience to slove. 
+The riddles should be easy enough to engage and entertain the participants. 
+Each riddle should have three options and only one correct answer. 
+Please follow the table format provideed below to present your riddles:
+
+Title Ι Hook Ι Body Ι Option1 Ι Option2 Ι Option3 Ι Answer
+
+For example:
+Title: Fun Riddles 101
+Hook: Can You Crack This?
+Body: I have the keys but no locks. I have space but no room. You can enter but can't go outside. What am I?
+
+Option 1: A Keyboard
+Option 2: A House
+Option 3: A Wallet
+
+Answer: A Keyboard
+
+Please ensure that your riddles are well-crafted, engaging, and provide a satisfying solution.
+
+
+- 윗 부분이 최초의 명령 부분이고 아랫부분은 표 형식으로 안나올 때 명령어입니다(영상 참고).-
+
+
+use a table format
