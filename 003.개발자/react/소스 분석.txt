@@ -1,0 +1,1148 @@
+
+● 완벽합니다! 리액트 초보자를 위한 7단계 실전 학습 로드맵을 작성했습니다.
+
+  ★ Insight ─────────────────────────────────────
+  로드맵 구성 철학:
+  - 실습 중심: 이론보다 "직접 해보기"에 집중 (각 단계마다 hands-on 과제 포함)
+  - 점진적 학습: 환경 설정 → 구조 파악 → TypeScript → React → 프로젝트 패턴 순으로 난이도 상승
+  - 실전 대비: Mock 데이터 수정, 페이지 추가 등 실제 업무에서 받을 요청 미리 연습
+  ─────────────────────────────────────────────────
+
+  📌 로드맵 핵심 요약
+
+  총 7단계 (약 15-20시간):
+  1. 환경 설정 (30분) - npm install, 개발 서버 실행, 앱 둘러보기
+  2. 프로젝트 구조 (1시간) - 폴더/파일 역할 파악, 간단한 텍스트 수정
+  3. TypeScript 기초 (2-3시간) - 타입, 인터페이스, 제네릭 이해
+  4. React 핵심 (3-4시간) - 컴포넌트, Props, State, Hooks 마스터
+  5. 프로젝트 패턴 (2시간) - Tailwind CSS, shadcn/ui, Mock 데이터 활용
+  6. 간단한 수정 연습 (2-3시간) - 5가지 실습 과제 (텍스트, 스타일, 데이터, 필터, 컴포넌트)
+  7. 새 기능 추가 연습 (3-4시간) - 통계 페이지 추가, 필터 기능 구현
+
+  보너스: API 연동 준비 (React Query 패턴)
+
+  🎯 학습 후 가능한 것들
+
+  - ✅ 텍스트/스타일 수정
+  - ✅ Mock 데이터 추가/변경
+  - ✅ 새 페이지 생성 (컴포넌트 + 라우팅 + 메뉴)
+  - ✅ 검색/필터 기능 추가
+  - ✅ shadcn/ui 컴포넌트 활용
+  - ✅ 기본적인 에러 해결
+
+  💡 학습 팁
+
+  - 작게 시작하기: 한 번에 모든 걸 이해하려 하지 마세요. 1단계씩!
+  - 자주 실행하기: 코드 수정 → 저장 → 브라우저 확인 (빠른 피드백)
+  - 복사-붙여넣기 OK: 비슷한 코드 찾아서 수정하는 것도 훌륭한 학습법
+  - 에러를 두려워하지 마세요: 빨간 줄은 "적"이 아니라 "선생님"
+
+  다음 개발 지시가 오면, 이 로드맵의 6-7단계 패턴을 활용하시면 됩니다!
+
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── Ready to code?
+
+ Here is Claude's plan:
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌ React 초보자를 위한 프로젝트 학습 로드맵
+
+ 📋 프로젝트 개요
+
+ - 프로젝트명: 기술 로드맵 관리 시스템
+ - 기술 스택: React 18 + TypeScript + Vite + shadcn/ui + Tailwind CSS
+ - 현재 상태: 프론트엔드 완성 (Mock 데이터 사용 중)
+ - 예상 업무: 새 기능 추가, UI 수정, 백엔드 API 연동
+
+ 🎯 학습자 프로필
+
+ - JavaScript: 기본 문법 이해 ✅
+ - TypeScript: 처음 접함 ❗
+ - React: 왕초보 ❗
+ - 개발 환경: Node.js + npm 준비 완료 ✅
+
+ ---
+ 📚 전체 로드맵 (총 7단계)
+
+ ✅ 1단계: 환경 설정 및 프로젝트 실행 (30분)
+
+ 목표: 프로젝트를 직접 눈으로 보면서 "이게 뭘 하는 프로그램인지" 파악하기
+
+ 실습 순서:
+ 1. 터미널을 열고 프로젝트 폴더로 이동
+ cd C:\Users\jooladen\Downloads\roadmap-main-layout\just-do-it-main
+ 2. 의존성 패키지 설치
+ npm install
+   - 처음 실행 시 1-3분 소요
+   - node_modules 폴더에 라이브러리들이 설치됨
+ 3. 개발 서버 실행
+ npm run dev
+   - 브라우저에서 http://localhost:8080 접속
+   - 파일 수정 시 자동으로 새로고침됨
+ 4. 애플리케이션 둘러보기
+   - 좌측 사이드바 메뉴 클릭해보기
+   - 기술분류 트리 펼치기/접기
+   - 관리자 메뉴들 탐색
+   - 어떤 페이지가 있는지 눈으로 확인
+
+ 체크포인트:
+ - npm run dev로 개발 서버 실행 성공
+ - 브라우저에서 애플리케이션 확인
+ - 최소 5개 이상의 페이지 방문해봄
+
+ 주의사항:
+ - 터미널 창을 닫으면 서버가 종료됨 (다시 npm run dev 실행)
+ - 에러 발생 시 터미널의 에러 메시지 확인
+
+ ---
+ 📁 2단계: 프로젝트 구조 파악하기 (1시간)
+
+ 목표: "어떤 파일이 어디에 있고, 무슨 역할을 하는지" 이해하기
+
+ 핵심 폴더 구조:
+ src/
+ ├── pages/           👈 페이지 컴포넌트 (URL별로 보이는 화면)
+ │   ├── Index.tsx                    # 홈 (기술분류 트리)
+ │   ├── admin/                       # 관리자 페이지들
+ │   │   ├── PermissionManagement.tsx # 권한 관리
+ │   │   ├── DepartmentManagement.tsx # 부서 관리
+ │   │   └── ... (5개 더)
+ │   └── tech-plan/
+ │       └── IntegratedTechPlan.tsx   # 통합 기술계획 타임라인
+ │
+ ├── components/      👈 재사용 가능한 UI 조각들
+ │   ├── layout/                      # 레이아웃 (Header, Sidebar)
+ │   ├── classification/              # 기술분류 관련
+ │   └── ui/                          # 버튼, 입력창 등 기본 UI
+ │
+ ├── data/            👈 Mock 데이터 (나중에 API로 교체할 부분!)
+ │   ├── classificationData.ts        # 기술분류 데이터
+ │   ├── permissionRequestData.ts     # 권한 요청 데이터
+ │   └── ... (9개 더)
+ │
+ ├── types/           👈 TypeScript 타입 정의
+ │   └── classification.ts
+ │
+ ├── hooks/           👈 React 커스텀 훅
+ ├── lib/             👈 유틸리티 함수
+ │
+ ├── App.tsx          👈 라우팅 설정 (URL과 페이지 연결)
+ └── main.tsx         👈 앱 시작점 (건드릴 일 거의 없음)
+
+ 실습 과제:
+ 1. VS Code로 프로젝트 열기
+   - 파일 > 폴더 열기 > 프로젝트 폴더 선택
+ 2. 주요 파일 읽어보기 (코드를 이해하려고 하지 말고, "어디에 뭐가 있는지" 위치만 파악)
+   - src/App.tsx - 라우팅 확인 (어떤 URL이 어떤 페이지로 가는지)
+   - src/pages/Index.tsx - 홈 페이지 코드
+   - src/components/layout/Header.tsx - 상단 헤더 코드
+   - src/data/classificationData.ts - Mock 데이터 예시
+ 3. 작은 수정 실험 (React 없이 할 수 있는 간단한 것)
+   - src/components/layout/Header.tsx 파일 열기
+   - 7번째 줄 근처에 "기술로드맵 관리시스템" 텍스트 찾기
+   - 텍스트를 "기술로드맵 관리 [내이름]" 으로 변경
+   - 저장 후 브라우저에서 변경사항 확인 (자동 새로고침됨)
+   - 다시 원래대로 되돌리기
+
+ 체크포인트:
+ - src/ 폴더 안의 5개 주요 폴더 역할 이해
+ - pages와 components의 차이 이해
+ - 간단한 텍스트 수정 후 브라우저에서 확인 성공
+
+ 💡 Insight:
+ - pages/는 "화면 전체", components/는 "화면 조각"
+ - 파일 수정 → 자동 저장 → 브라우저 자동 새로고침 (이것이 개발 경험!)
+ - Mock 데이터는 나중에 실제 API로 교체할 "임시 데이터"
+
+ ---
+ 🔤 3단계: TypeScript 필수 개념 익히기 (2-3시간)
+
+ 목표: 코드에서 나오는 "이상한 문법"들 이해하기
+
+ TypeScript는 JavaScript에 타입을 추가한 언어입니다. 변수/함수가 어떤 종류의 데이터를 다루는지 명시하여 오류를 미리 방지합니다.
+
+ 3-1. 기본 타입 익히기
+
+ JavaScript에서 알던 것:
+ let name = "홍길동";
+ let age = 25;
+ let isActive = true;
+
+ TypeScript로 명시하면:
+ let name: string = "홍길동";      // 문자열만 허용
+ let age: number = 25;             // 숫자만 허용
+ let isActive: boolean = true;     // true/false만 허용
+
+ // 나중에 다른 타입 넣으면 에러!
+ age = "스물다섯"; // ❌ 에러: string은 number에 할당 불가
+
+ 이 프로젝트에서 보게 될 예시:
+ - src/pages/admin/PermissionManagement.tsx:19
+ const [selectedStatus, setSelectedStatus] = useState<string>("all");
+ - 👉 selectedStatus는 string 타입의 값만 가질 수 있음
+
+ 3-2. 인터페이스 (Interface) 이해하기
+
+ **객체의 "청사진"**을 정의합니다.
+
+ // 사용자 데이터의 구조 정의
+ interface User {
+   id: number;
+   name: string;
+   email: string;
+   isAdmin: boolean;
+ }
+
+ // 이 구조에 맞는 데이터만 허용
+ const user: User = {
+   id: 1,
+   name: "홍길동",
+   email: "hong@example.com",
+   isAdmin: false
+ };
+
+ 이 프로젝트에서 실제 사용 예시:
+ - src/types/classification.ts:30-40 - PermissionRequest 인터페이스
+ export interface PermissionRequest {
+   id: string;
+   requestDate: string;
+   requesterName: string;
+   department: string;
+   // ... 더 많은 필드들
+ }
+ - 👉 권한 요청 데이터는 반드시 이 구조를 따라야 함
+
+ 3-3. 타입 vs 인터페이스
+
+ 둘 다 비슷하지만, 이 프로젝트에서는 주로 interface 사용:
+
+ // Type 방식
+ type Color = "red" | "blue" | "green";
+
+ // Interface 방식
+ interface Classification {
+   id: string;
+   name: string;
+   level: number;
+ }
+
+ 3-4. 옵셔널 프로퍼티 (?)
+
+ 필수가 아닌 필드는 ? 표시:
+
+ interface Config {
+   title: string;        // 필수
+   subtitle?: string;    // 선택사항 (없어도 됨)
+ }
+
+ const config1: Config = { title: "제목" };                    // ✅ OK
+ const config2: Config = { title: "제목", subtitle: "부제" };  // ✅ OK
+
+ 이 프로젝트 예시:
+ - src/types/classification.ts:67-76 - ClassificationTreeNode
+ children?: ClassificationTreeNode[];  // children이 없을 수도 있음
+
+ 3-5. 제네릭 <T> 기호
+
+ "나중에 정해질 타입"을 위한 자리 표시:
+
+ // React의 useState 예시
+ const [count, setCount] = useState<number>(0);
+ //                                 ^^^^^^^ count는 number 타입
+ const [name, setName] = useState<string>("");
+ //                               ^^^^^^ name은 string 타입
+
+ 실습 과제:
+ 1. src/types/classification.ts 파일 열기
+ 2. 3개 이상의 interface 찾아서 읽어보기
+ 3. 각 interface가 "어떤 데이터의 구조"를 정의하는지 추측하기
+
+ 체크포인트:
+ - string, number, boolean 타입 이해
+ - interface가 "객체 구조 정의"라는 것 이해
+ - ? 기호가 "선택사항"이라는 것 이해
+ - <> 제네릭 기호를 두려워하지 않게 됨
+
+ 💡 Insight:
+ - TypeScript는 "미리 오류를 잡아주는 도구" (런타임 전에 VS Code에서 빨간 줄로 경고)
+ - 처음엔 귀찮지만, 큰 프로젝트에서는 필수! (오타/타입 실수 방지)
+ - 에러 메시지를 읽는 법: "Type 'string' is not assignable to type 'number'" = "문자열을 숫자에 넣을 수 없어요"
+
+ ---
+ ⚛️ 4단계: React 핵심 개념 익히기 (3-4시간)
+
+ 목표: 컴포넌트, Props, State, Hooks의 개념과 사용법 이해
+
+ 4-1. 컴포넌트 (Component) 이해하기
+
+ 컴포넌트 = 재사용 가능한 UI 블록
+
+ 간단한 버튼 컴포넌트 예시:
+ // SimpleButton.tsx
+ interface ButtonProps {
+   text: string;      // 버튼 텍스트
+   onClick: () => void;  // 클릭 시 실행할 함수
+ }
+
+ function SimpleButton({ text, onClick }: ButtonProps) {
+   return (
+     <button onClick={onClick}>
+       {text}
+     </button>
+   );
+ }
+
+ // 사용하는 곳
+ <SimpleButton text="저장" onClick={() => alert("저장!")} />
+ <SimpleButton text="취소" onClick={() => alert("취소!")} />
+
+ 이 프로젝트의 실제 예시:
+ - src/components/ui/button.tsx - 버튼 컴포넌트
+ - src/components/layout/Header.tsx - 헤더 컴포넌트
+
+ 4-2. Props (속성)
+
+ 부모 컴포넌트에서 자식 컴포넌트로 데이터 전달:
+
+ // 자식 컴포넌트
+ interface GreetingProps {
+   name: string;
+   age: number;
+ }
+
+ function Greeting({ name, age }: GreetingProps) {
+   return <div>안녕하세요, {name}님! ({age}세)</div>;
+ }
+
+ // 부모 컴포넌트에서 사용
+ <Greeting name="홍길동" age={25} />
+
+ 실제 프로젝트 예시:
+ - src/components/classification/ClassificationTree.tsx:7-10
+ interface ClassificationTreeProps {
+   data: ClassificationTreeNode[];  // 부모가 트리 데이터 전달
+   onNodeClick?: (node: ClassificationTreeNode) => void;
+ }
+
+ 4-3. State (상태)
+
+ 컴포넌트의 "기억" - 값이 바뀌면 화면이 자동으로 다시 그려짐:
+
+ import { useState } from 'react';
+
+ function Counter() {
+   // count: 현재 값
+   // setCount: 값을 바꾸는 함수
+   const [count, setCount] = useState<number>(0);
+
+   return (
+     <div>
+       <p>카운트: {count}</p>
+       <button onClick={() => setCount(count + 1)}>증가</button>
+     </div>
+   );
+ }
+
+ 클릭 시 일어나는 일:
+ 1. setCount(count + 1) 실행
+ 2. count 값 변경 (0 → 1)
+ 3. React가 화면 자동 다시 렌더링
+ 4. 새로운 숫자 표시
+
+ 프로젝트 예시:
+ - src/pages/admin/PermissionManagement.tsx:18-19
+ const [selectedStatus, setSelectedStatus] = useState<string>("all");
+ const [searchTerm, setSearchTerm] = useState<string>("");
+ - 👉 필터 상태와 검색어를 기억
+
+ 4-4. 이벤트 핸들링
+
+ 사용자 행동(클릭, 입력 등)에 반응하기:
+
+ function SearchBox() {
+   const [text, setText] = useState<string>("");
+
+   // 입력창에 타이핑할 때마다 실행
+   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+     setText(e.target.value);  // 입력값으로 상태 업데이트
+   };
+
+   return (
+     <input
+       type="text"
+       value={text}
+       onChange={handleChange}
+       placeholder="검색..."
+     />
+   );
+ }
+
+ 프로젝트 예시:
+ - src/pages/admin/PermissionManagement.tsx:78-82
+ <Input
+   placeholder="검색..."
+   value={searchTerm}
+   onChange={(e) => setSearchTerm(e.target.value)}
+ />
+
+ 4-5. 조건부 렌더링
+
+ 조건에 따라 다른 UI 보여주기:
+
+ function LoginStatus({ isLoggedIn }: { isLoggedIn: boolean }) {
+   // 방법 1: if 사용
+   if (isLoggedIn) {
+     return <div>환영합니다!</div>;
+   }
+   return <div>로그인하세요</div>;
+
+   // 방법 2: 삼항 연산자
+   return (
+     <div>
+       {isLoggedIn ? "환영합니다!" : "로그인하세요"}
+     </div>
+   );
+
+   // 방법 3: && 연산자 (true일 때만 보여주기)
+   return (
+     <div>
+       {isLoggedIn && <button>로그아웃</button>}
+     </div>
+   );
+ }
+
+ 프로젝트 예시:
+ - src/pages/admin/PermissionManagement.tsx:103-109
+ {filteredRequests.length === 0 ? (
+   <div>요청이 없습니다</div>
+ ) : (
+   <div>목록 표시...</div>
+ )}
+
+ 4-6. 리스트 렌더링 (map)
+
+ 배열 데이터를 UI로 변환:
+
+ function UserList() {
+   const users = [
+     { id: 1, name: "홍길동" },
+     { id: 2, name: "김철수" },
+     { id: 3, name: "이영희" }
+   ];
+
+   return (
+     <ul>
+       {users.map(user => (
+         <li key={user.id}>{user.name}</li>
+       ))}
+     </ul>
+   );
+ }
+
+ ⚠️ 중요: key 속성은 필수! (React가 각 항목을 구별하기 위해)
+
+ 프로젝트 예시:
+ - src/pages/admin/PermissionManagement.tsx:117-148
+ {filteredRequests.map((request) => (
+   <TableRow key={request.id}>
+     {/* 각 요청 항목 렌더링 */}
+   </TableRow>
+ ))}
+
+ 4-7. useEffect Hook
+
+ 컴포넌트가 화면에 나타난 후 / 값이 변경된 후 실행할 작업:
+
+ import { useState, useEffect } from 'react';
+
+ function DataFetcher() {
+   const [data, setData] = useState<any>(null);
+
+   // 컴포넌트가 처음 화면에 나타날 때 1번 실행
+   useEffect(() => {
+     console.log("컴포넌트 마운트됨!");
+     // API 호출, 타이머 설정 등
+   }, []);  // 빈 배열 = 처음 1번만
+
+   // searchTerm이 바뀔 때마다 실행
+   useEffect(() => {
+     console.log("검색어 변경:", searchTerm);
+   }, [searchTerm]);  // searchTerm 변경 감지
+
+   return <div>{data}</div>;
+ }
+
+ 일반적인 useEffect 사용 사례:
+ - API 데이터 가져오기
+ - 타이머/인터벌 설정
+ - 외부 라이브러리 초기화
+ - 로컬 스토리지 읽기/쓰기
+
+ 프로젝트에서는 현재 잘 사용 안 됨 (Mock 데이터라서) → API 연동 시 배울 예정!
+
+ 실습 과제:
+ 1. 간단한 카운터 만들기 (새 파일 생성하지 말고, 기존 페이지 임시 수정)
+   - src/pages/NotFound.tsx 파일 열기
+   - 기존 코드 위에 임시로 다음 코드 추가:
+   function TestCounter() {
+   const [count, setCount] = useState<number>(0);
+   return (
+     <div style={{ padding: "20px", border: "2px solid blue" }}>
+       <h2>카운트: {count}</h2>
+       <button onClick={() => setCount(count + 1)}>증가</button>
+       <button onClick={() => setCount(count - 1)}>감소</button>
+     </div>
+   );
+ }
+   - NotFound 컴포넌트 return 문 안에 <TestCounter /> 추가
+   - 브라우저에서 아무 잘못된 URL 접속 (예: localhost:8080/test)
+   - 버튼 클릭해서 숫자 변경 확인
+ 2. 기존 컴포넌트 분석하기
+   - src/pages/admin/PermissionManagement.tsx 열기
+   - useState로 관리하는 상태 3개 찾기
+   - map을 사용하는 부분 찾기
+   - 조건부 렌더링 부분 찾기
+
+ 체크포인트:
+ - 컴포넌트 = 함수 + JSX 반환 이해
+ - Props로 데이터 전달 이해
+ - useState로 상태 관리 이해
+ - 배열.map()으로 리스트 렌더링 이해
+ - 간단한 카운터 실습 성공
+
+ 💡 Insight:
+ - React의 핵심: 데이터(state)가 바뀌면 → UI가 자동으로 업데이트
+ - 단방향 데이터 흐름: 부모 → 자식으로만 props 전달 (역방향은 함수로!)
+ - 불변성 원칙: state를 직접 수정하지 말고, 항상 setState 사용
+ // ❌ 잘못된 방법
+ count = count + 1;
+
+ // ✅ 올바른 방법
+ setCount(count + 1);
+
+ ---
+ 🎨 5단계: 이 프로젝트의 특별한 패턴 이해하기 (2시간)
+
+ 목표: shadcn/ui, Tailwind CSS 사용법 익히기
+
+ 5-1. Tailwind CSS - 클래스 기반 스타일링
+
+ 전통적인 CSS:
+ /* styles.css */
+ .button {
+   background-color: blue;
+   color: white;
+   padding: 10px 20px;
+   border-radius: 4px;
+ }
+ <button class="button">클릭</button>
+
+ Tailwind 방식:
+ <button className="bg-blue-500 text-white px-5 py-2.5 rounded">
+   클릭
+ </button>
+
+ 주요 클래스 패턴:
+ - 색상: bg-blue-500, text-red-600, border-gray-300
+ - 간격: p-4 (padding), m-2 (margin), px-6 (좌우 padding)
+ - 크기: w-full (너비 100%), h-20, text-lg
+ - 레이아웃: flex, grid, items-center, justify-between
+ - 반응형: md:flex (중간 화면 이상에서만 flex)
+
+ 프로젝트 예시:
+ - src/components/layout/Header.tsx:17
+ <div className="flex items-center gap-4">
+ - 👉 flex 레이아웃, 세로 중앙 정렬, 항목 간 간격 4
+
+ 5-2. shadcn/ui - 고품질 UI 컴포넌트
+
+ 이 프로젝트는 shadcn/ui 라이브러리의 컴포넌트를 사용합니다.
+
+ 사용 가능한 컴포넌트 (src/components/ui/ 폴더):
+ - button.tsx - 버튼 (variant: default, destructive, outline, ghost...)
+ - input.tsx - 입력창
+ - select.tsx - 드롭다운 선택
+ - table.tsx - 테이블
+ - dialog.tsx - 모달/팝업
+ - badge.tsx - 배지/태그
+ - card.tsx - 카드 레이아웃
+ - ... 총 50개 이상!
+
+ 버튼 사용 예시:
+ import { Button } from "@/components/ui/button";
+
+ // 기본 버튼
+ <Button>클릭</Button>
+
+ // 삭제 버튼 (빨간색)
+ <Button variant="destructive">삭제</Button>
+
+ // 외곽선 버튼
+ <Button variant="outline">취소</Button>
+
+ // 작은 버튼
+ <Button size="sm">작은 버튼</Button>
+
+ 프로젝트 예시:
+ - src/pages/admin/PermissionManagement.tsx:129-130
+ <Button size="sm" variant="outline">승인</Button>
+ <Button size="sm" variant="destructive">거부</Button>
+
+ 테이블 사용 예시:
+ import {
+   Table,
+   TableHeader,
+   TableBody,
+   TableRow,
+   TableHead,
+   TableCell,
+ } from "@/components/ui/table";
+
+ <Table>
+   <TableHeader>
+     <TableRow>
+       <TableHead>이름</TableHead>
+       <TableHead>이메일</TableHead>
+     </TableRow>
+   </TableHeader>
+   <TableBody>
+     {data.map(item => (
+       <TableRow key={item.id}>
+         <TableCell>{item.name}</TableCell>
+         <TableCell>{item.email}</TableCell>
+       </TableRow>
+     ))}
+   </TableBody>
+ </Table>
+
+ 5-3. 폼 처리 패턴 (React Hook Form + Zod)
+
+ 이 프로젝트는 폼 관리를 위해 React Hook Form을 사용합니다.
+
+ 기본 패턴:
+ import { useForm } from "react-hook-form";
+ import { z } from "zod";
+
+ // 1. Zod로 검증 스키마 정의
+ const formSchema = z.object({
+   email: z.string().email("이메일 형식이 아닙니다"),
+   age: z.number().min(18, "18세 이상만 가능"),
+ });
+
+ type FormData = z.infer<typeof formSchema>;
+
+ function MyForm() {
+   // 2. useForm 훅 사용
+   const form = useForm<FormData>();
+
+   // 3. 제출 핸들러
+   const onSubmit = (data: FormData) => {
+     console.log("제출된 데이터:", data);
+   };
+
+   return (
+     <form onSubmit={form.handleSubmit(onSubmit)}>
+       <input {...form.register("email")} />
+       <button type="submit">제출</button>
+     </form>
+   );
+ }
+
+ 프로젝트 예시:
+ - src/pages/PermissionRequest.tsx:20-28 - 권한 요청 폼
+
+ 5-4. Mock 데이터 구조
+
+ 현재는 실제 API 없이 하드코딩된 데이터 사용:
+
+ 예시 (src/data/permissionRequestData.ts):
+ export const mockPermissionRequests: PermissionRequest[] = [
+   {
+     id: "REQ-001",
+     requestDate: "2024-03-15",
+     requesterName: "홍길동",
+     department: "연구개발팀",
+     // ...
+   },
+   // ... 더 많은 데이터
+ ];
+
+ 페이지에서 사용:
+ import { mockPermissionRequests } from "@/data/permissionRequestData";
+
+ function PermissionManagement() {
+   const [requests] = useState(mockPermissionRequests);
+   // requests를 화면에 렌더링
+ }
+
+ 💡 나중에 할 일: 이 Mock 데이터를 실제 API 호출로 교체!
+
+ 실습 과제:
+ 1. Tailwind 클래스 실험
+   - src/pages/NotFound.tsx 열기
+   - "404 - 페이지를 찾을 수 없습니다" 텍스트 찾기
+   - 클래스 수정: className="text-red-500 text-4xl font-bold"
+   - 브라우저에서 변경 확인
+   - 다른 클래스 실험: bg-blue-100 p-8 rounded-lg
+ 2. shadcn/ui 컴포넌트 탐색
+   - src/components/ui/button.tsx 열기
+   - variant 옵션들 확인 (default, destructive, outline...)
+   - src/pages/admin/PermissionManagement.tsx에서 Button 사용 예시 찾기
+ 3. Mock 데이터 수정
+   - src/data/permissionRequestData.ts 열기
+   - 첫 번째 요청의 이름을 자신의 이름으로 변경
+   - 브라우저에서 /admin/permission-management 접속하여 확인
+
+ 체크포인트:
+ - Tailwind CSS 클래스 패턴 이해
+ - shadcn/ui 컴포넌트 import 방법 이해
+ - Mock 데이터 위치와 사용 방법 이해
+
+ 💡 Insight:
+ - Tailwind의 장점: CSS 파일 왔다 갔다 안 해도 됨, 일관된 디자인 시스템
+ - shadcn/ui의 특징: 복사-붙여넣기 방식 (node_modules가 아닌 src/에 직접 포함)
+ - Mock 데이터 전략: 백엔드 완성 전에 프론트 먼저 개발 가능
+
+ ---
+ 🔧 6단계: 간단한 수정 작업 연습 (2-3시간)
+
+ 목표: 실제 업무에서 자주 받을 "작은 수정" 요청 처리하기
+
+ 연습 1: 텍스트 변경
+
+ 시나리오: "홈 페이지 타이틀을 '기술분류 관리'로 변경해주세요"
+
+ 단계:
+ 1. src/pages/Index.tsx 열기
+ 2. 9번째 줄: <h1>기술분류 시스템</h1> 찾기
+ 3. 기술분류 관리로 변경
+ 4. 저장 후 브라우저에서 확인
+
+ 연습 2: 버튼 스타일 변경
+
+ 시나리오: "권한 승인 버튼을 파란색으로 변경해주세요"
+
+ 단계:
+ 1. src/pages/admin/PermissionManagement.tsx 열기
+ 2. 129번째 줄 근처: 승인 버튼 찾기
+ <Button size="sm" variant="outline">승인</Button>
+ 3. variant="outline"을 variant="default"로 변경
+ 4. /admin/permission-management 페이지에서 확인
+
+ 연습 3: 새로운 Mock 데이터 추가
+
+ 시나리오: "권한 요청 목록에 새 항목 1개 추가해주세요"
+
+ 단계:
+ 1. src/data/permissionRequestData.ts 열기
+ 2. 배열 맨 끝에 새 객체 추가:
+ {
+   id: "REQ-999",
+   requestDate: "2024-12-29",
+   requesterName: "테스트사용자",
+   department: "기술팀",
+   position: "연구원",
+   email: "test@example.com",
+   phone: "010-1234-5678",
+   requestType: "신규요청" as const,
+   requestedClassifications: [
+     { level: "대분류", name: "인공지능" },
+   ],
+   requestReason: "연습용 데이터입니다",
+   status: "pending" as const,
+   requestNumber: "REQ-999",
+ }
+ 3. 저장 후 권한 관리 페이지에서 확인
+
+ 연습 4: 필터 기본값 변경
+
+ 시나리오: "권한 관리 페이지의 상태 필터 기본값을 '승인'으로 설정해주세요"
+
+ 단계:
+ 1. src/pages/admin/PermissionManagement.tsx 열기
+ 2. 18번째 줄:
+ const [selectedStatus, setSelectedStatus] = useState<string>("all");
+ 3. "all"을 "approved"로 변경
+ 4. 페이지 새로고침 시 자동으로 승인된 항목만 표시됨 확인
+
+ 연습 5: 컴포넌트 추가 (조금 더 어려움)
+
+ 시나리오: "권한 관리 페이지 상단에 안내 메시지 추가해주세요"
+
+ 단계:
+ 1. src/pages/admin/PermissionManagement.tsx 열기
+ 2. import 섹션에 Alert 컴포넌트 추가:
+ import { Alert, AlertDescription } from "@/components/ui/alert";
+ 3. 50번째 줄 근처, <div className="space-y-6"> 바로 다음 줄에 추가:
+ <Alert>
+   <AlertDescription>
+     권한 요청을 검토하고 승인/거부할 수 있습니다.
+   </AlertDescription>
+ </Alert>
+ 4. 브라우저에서 페이지 상단에 안내 메시지 확인
+
+ 체크포인트:
+ - 5개 연습 중 최소 3개 성공
+ - 파일 수정 → 저장 → 브라우저 확인 흐름 익숙해짐
+ - TypeScript 에러 읽고 해결할 수 있음
+
+ 💡 Insight:
+ - 작은 수정의 패턴: 기존 코드 찾기 → 값 변경 → 확인
+ - 컴포넌트 추가: import → JSX에 추가 → props 전달
+ - 에러 해결: VS Code의 빨간 줄 위에 마우스 올려 에러 메시지 읽기
+
+ ---
+ ➕ 7단계: 새 기능 추가 연습 (3-4시간)
+
+ 목표: "새 페이지 추가" 또는 "새 기능 추가" 요청 처리하기
+
+ 프로젝트 A: 간단한 통계 페이지 추가
+
+ 시나리오: "전체 권한 요청 통계를 보여주는 페이지를 만들어주세요"
+
+ Step 1: 새 페이지 컴포넌트 생성
+ - 파일: src/pages/admin/StatisticsPage.tsx
+ - 내용:
+ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+ import { mockPermissionRequests } from "@/data/permissionRequestData";
+
+ export default function StatisticsPage() {
+   // 통계 계산
+   const total = mockPermissionRequests.length;
+   const pending = mockPermissionRequests.filter(r => r.status === "pending").length;
+   const approved = mockPermissionRequests.filter(r => r.status === "approved").length;
+   const rejected = mockPermissionRequests.filter(r => r.status === "rejected").length;
+
+   return (
+     <div className="p-6">
+       <h1 className="text-2xl font-bold mb-6">권한 요청 통계</h1>
+
+       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+         <Card>
+           <CardHeader>
+             <CardTitle>전체 요청</CardTitle>
+           </CardHeader>
+           <CardContent>
+             <p className="text-3xl font-bold">{total}</p>
+           </CardContent>
+         </Card>
+
+         <Card>
+           <CardHeader>
+             <CardTitle>대기 중</CardTitle>
+           </CardHeader>
+           <CardContent>
+             <p className="text-3xl font-bold text-yellow-600">{pending}</p>
+           </CardContent>
+         </Card>
+
+         <Card>
+           <CardHeader>
+             <CardTitle>승인됨</CardTitle>
+           </CardHeader>
+           <CardContent>
+             <p className="text-3xl font-bold text-green-600">{approved}</p>
+           </CardContent>
+         </Card>
+
+         <Card>
+           <CardHeader>
+             <CardTitle>거부됨</CardTitle>
+           </CardHeader>
+           <CardContent>
+             <p className="text-3xl font-bold text-red-600">{rejected}</p>
+           </CardContent>
+         </Card>
+       </div>
+     </div>
+   );
+ }
+
+ Step 2: 라우팅 추가
+ - 파일: src/App.tsx
+ - 14번째 줄 근처에 import 추가:
+ import StatisticsPage from "@/pages/admin/StatisticsPage";
+ - 47번째 줄 근처, <Route> 목록에 추가:
+ <Route path="/admin/statistics" element={<StatisticsPage />} />
+
+ Step 3: 사이드바 메뉴 추가
+ - 파일: src/components/layout/AppSidebar.tsx
+ - 80번째 줄 근처, "관리자" 섹션의 items 배열에 추가:
+ {
+   title: "통계",
+   url: "/admin/statistics",
+   icon: BarChart,  // 상단에 import 추가: import { BarChart } from "lucide-react";
+ },
+
+ Step 4: 확인
+ - 브라우저에서 사이드바의 "통계" 메뉴 클릭
+ - 4개의 통계 카드 확인
+
+ 프로젝트 B: 검색 기능 개선
+
+ 시나리오: "권한 관리 페이지에 부서별 필터를 추가해주세요"
+
+ Step 1: 부서 목록 상수 정의
+ - 파일: src/pages/admin/PermissionManagement.tsx
+ - 15번째 줄 근처에 추가:
+ const DEPARTMENTS = ["전체", "연구개발팀", "기획팀", "마케팅팀", "재무팀"];
+
+ Step 2: 부서 필터 상태 추가
+ - 같은 파일, 18-19번째 줄 아래에 추가:
+ const [selectedDepartment, setSelectedDepartment] = useState<string>("전체");
+
+ Step 3: 필터 로직 수정
+ - 22-30번째 줄의 filteredRequests 계산 로직 수정:
+ const filteredRequests = mockPermissionRequests.filter((request) => {
+   const matchesStatus = selectedStatus === "all" || request.status === selectedStatus;
+   const matchesSearch = request.requesterName.toLowerCase().includes(searchTerm.toLowerCase()) ||
+     request.department.toLowerCase().includes(searchTerm.toLowerCase());
+   const matchesDepartment = selectedDepartment === "전체" || request.department === selectedDepartment;
+
+   return matchesStatus && matchesSearch && matchesDepartment;
+ });
+
+ Step 4: UI에 부서 선택 추가
+ - 78-92번째 줄, 검색창 아래에 추가:
+ <Select value={selectedDepartment} onValueChange={setSelectedDepartment}>
+   <SelectTrigger className="w-[200px]">
+     <SelectValue placeholder="부서 선택" />
+   </SelectTrigger>
+   <SelectContent>
+     {DEPARTMENTS.map(dept => (
+       <SelectItem key={dept} value={dept}>
+         {dept}
+       </SelectItem>
+     ))}
+   </SelectContent>
+ </Select>
+
+ Step 5: 확인
+ - 부서 드롭다운 선택 시 목록 필터링 확인
+
+ 체크포인트:
+ - 새 페이지 추가 (라우팅 포함) 성공
+ - 기존 페이지에 새 기능 추가 성공
+ - Mock 데이터를 활용한 로직 작성 이해
+
+ 💡 Insight:
+ - 새 페이지 추가 = 3단계: 컴포넌트 생성 → 라우팅 등록 → 메뉴 추가
+ - 필터 패턴: 상태 변수 + filter 함수 + UI 컨트롤
+ - 컴포넌트 재사용: 기존 UI 컴포넌트(Card, Select 등)를 조합하여 새 기능 구현
+
+ ---
+ 🔌 API 연동 준비 (보너스 단계)
+
+ 목표: Mock 데이터를 실제 백엔드 API로 교체하는 방법 이해
+
+ 현재 구조 (Mock):
+
+ // src/pages/admin/PermissionManagement.tsx
+ import { mockPermissionRequests } from "@/data/permissionRequestData";
+
+ function PermissionManagement() {
+   const [requests] = useState(mockPermissionRequests);
+   // ...
+ }
+
+ 미래 구조 (API):
+
+ import { useEffect, useState } from "react";
+
+ function PermissionManagement() {
+   const [requests, setRequests] = useState<PermissionRequest[]>([]);
+   const [loading, setLoading] = useState(true);
+
+   // 컴포넌트 마운트 시 API 호출
+   useEffect(() => {
+     async function fetchRequests() {
+       try {
+         const response = await fetch("/api/permission-requests");
+         const data = await response.json();
+         setRequests(data);
+       } catch (error) {
+         console.error("데이터 로드 실패:", error);
+       } finally {
+         setLoading(false);
+       }
+     }
+
+     fetchRequests();
+   }, []);
+
+   if (loading) return <div>로딩 중...</div>;
+
+   // 기존 렌더링 로직
+ }
+
+ TanStack React Query 사용 (권장):
+
+ import { useQuery } from "@tanstack/react-query";
+
+ function PermissionManagement() {
+   const { data: requests, isLoading, error } = useQuery({
+     queryKey: ["permissionRequests"],
+     queryFn: async () => {
+       const response = await fetch("/api/permission-requests");
+       if (!response.ok) throw new Error("로드 실패");
+       return response.json();
+     },
+   });
+
+   if (isLoading) return <div>로딩 중...</div>;
+   if (error) return <div>에러 발생: {error.message}</div>;
+
+   // 기존 렌더링 로직 (requests 사용)
+ }
+
+ 백엔드 연동 시 체크리스트:
+ - API 엔드포인트 URL 확인
+ - 데이터 형식(interface) 맞는지 확인
+ - 로딩 상태 UI 추가
+ - 에러 처리 추가
+ - CORS 설정 확인 (백엔드와 협의)
+
+ ---
+ 📋 전체 학습 체크리스트
+
+ 환경 & 기초
+
+ - npm install 성공 및 개발 서버 실행
+ - 프로젝트 폴더 구조 이해 (pages, components, data)
+ - TypeScript 기본 타입 이해 (string, number, interface)
+ - React 컴포넌트 개념 이해
+
+ 핵심 개념
+
+ - Props로 데이터 전달 이해
+ - useState로 상태 관리 이해
+ - map으로 리스트 렌더링 이해
+ - 조건부 렌더링 (삼항 연산자, &&) 이해
+ - 이벤트 핸들러 작성 가능
+
+ 프로젝트 특화
+
+ - Tailwind CSS 클래스 사용 가능
+ - shadcn/ui 컴포넌트 import 및 사용 가능
+ - Mock 데이터 위치 파악 및 수정 가능
+
+ 실전 능력
+
+ - 텍스트/스타일 간단 수정 가능
+ - Mock 데이터 추가/수정 가능
+ - 새 페이지 추가 (컴포넌트 + 라우팅 + 메뉴) 가능
+ - 필터/검색 기능 추가 가능
+ - Git commit & push 가능 (선택사항)
+
+ ---
+ 🆘 자주 발생하는 문제 & 해결법
+
+ 문제 1: "Module not found" 에러
+
+ 원인: import 경로 오류
+ 해결:
+ - @/는 src/의 별칭 (vite.config.ts에 설정됨)
+ - 예: @/components/ui/button = src/components/ui/button
+ - 파일 확장자 .tsx 생략 가능
+
+ 문제 2: TypeScript 에러 (빨간 줄)
+
+ 원인: 타입 불일치
+ 해결:
+ - VS Code에서 빨간 줄 위에 마우스 올려 에러 메시지 읽기
+ - Type 'X' is not assignable to type 'Y' → X와 Y 타입 확인
+ - 필요 시 타입 명시: const value: string = ...
+
+ 문제 3: 화면에 아무것도 안 보임
+
+ 원인:
+ - 컴포넌트가 아무것도 return하지 않음
+ - 조건문에서 항상 false
+ 해결:
+ - 컴포넌트가 JSX를 return하는지 확인
+ - console.log로 데이터 확인
+ - 브라우저 개발자 도구 Console 탭 확인
+
+ 문제 4: 변경사항이 반영 안 됨
+
+ 원인: 파일 저장 안 함 / 서버 재시작 필요
+ 해결:
+ - Ctrl+S로 파일 저장 확인
+ - 개발 서버 재시작 (터미널에서 Ctrl+C → npm run dev)
+ - 브라우저 강력 새로고침 (Ctrl+Shift+R)
+
+ 문제 5: "Cannot read property of undefined"
+
+ 원인: 데이터가 로드되기 전에 접근
+ 해결:
+ - 옵셔널 체이닝 사용: user?.name
+ - 조건부 렌더링: {data && <Component data={data} />}
+
+ ---
+ 🎓 추가 학습 자료
+
+ 공식 문서
+
+ - React: https://react.dev/learn
+ - TypeScript: https://www.typescriptlang.org/docs/
+ - Tailwind CSS: https://tailwindcss.com/docs
+ - shadcn/ui: https://ui.shadcn.com/
+ - React Router: https://reactrouter.com/
+
+ 추천 학습 순서
+
+ 1. React 공식 문서의 "Learn React" 섹션 (1-2일)
+ 2. TypeScript Handbook 기초 부분 (1일)
+ 3. Tailwind CSS 문서 "Core Concepts" (2-3시간)
+ 4. 이 프로젝트로 실습하면서 배우기! ⭐
+
+ 유튜브 채널 (한글)
+
+ - 코딩앙마 - React 기초
+ - 드림코딩 - TypeScript
+ - 노마드코더 - React 풀코스
+
+ ---
+ 💪 실전 대비 마인드셋
+
+ 개발 지시를 받았을 때:
+
+ 1. 요구사항 명확히 하기
+   - "어떤 페이지에?"
+   - "어떤 동작을 해야 하나요?"
+   - "디자인은 기존 스타일 따라가나요?"
+ 2. 비슷한 코드 찾기
+   - 이미 구현된 페이지/기능 참고
+   - 복사-붙여넣기 후 수정하는 것도 좋은 방법!
+ 3. 작게 나눠서 진행
+   - 한 번에 다 하려 하지 말기
+   - UI 먼저 → 데이터 연결 → 이벤트 처리 순서로
+ 4. 자주 확인하기
+   - 코드 한 줄 추가할 때마다 브라우저 확인
+   - 에러 나면 바로 고치기 (쌓이면 복잡해짐)
+ 5. Git 활용
+   - 작동하는 상태에서 commit
+   - 실험할 때는 새 브랜치 만들기
+
+ 막혔을 때:
+
+ 1. 에러 메시지 정확히 읽기
+ 2. 비슷한 코드 찾아서 비교하기
+ 3. console.log로 데이터 확인하기
+ 4. 구글 검색: "react [하고 싶은 것] example"
+ 5. ChatGPT/Claude에 에러 메시지 복사해서 물어보기
+
+ ---
+ ✅ 다음 개발 지시가 왔을 때 준비 완료!
+
+ 이 로드맵을 따라 학습하면:
+ - ✅ 프로젝트 구조 완벽 파악
+ - ✅ React + TypeScript 기본 이해
+ - ✅ 간단한 수정 작업 가능
+ - ✅ 새 페이지/기능 추가 가능
+ - ✅ 에러 해결 능력 갖춤
+
+ 첫 개발 지시를 받으면:
+ 1. 비슷한 기능이 이미 있는지 찾아보기
+ 2. 그 코드를 복사해서 수정하기
+ 3. 모르는 부분은 질문하기 (부끄러워하지 말기!)
+ 4. 작동하면 commit하기
+
+ 화이팅! 🚀
