@@ -1,0 +1,117 @@
+1. 프로젝트 목록 조회
+https://jooladen.atlassian.net/rest/api/3/project/search
+
+{"self":"https://jooladen.atlassian.net/rest/api/3/project/search?maxResults=50&startAt=0","maxResults":50,"startAt":0,"total":3,"isLast":true,"values":[{"expand":"description,lead,issueTypes,url,projectKeys,permissions,insight","self":"https://jooladen.atlassian.net/rest/api/3/project/10000","id":"10000","key":"KAN","name":"내 소프트웨어 팀","avatarUrls":{"48x48":"https://jooladen.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10404","24x24":"https://jooladen.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10404?size=small","16x16":"https://jooladen.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10404?size=xsmall","32x32":"https://jooladen.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10404?size=medium"},"projectTypeKey":"software","simplified":true,"style":"next-gen","isPrivate":false,"properties":{},"entityId":"a170a4e7-ee06-4c6b-bd96-c9672994cef9","uuid":"a170a4e7-ee06-4c6b-bd96-c9672994cef9"},{"expand":"description,lead,issueTypes,url,projectKeys,permissions,insight","self":"https://jooladen.atlassian.net/rest/api/3/project/10036","id":"10036","key":"NQFO","name":"회사이름","avatarUrls":{"48x48":"https://jooladen.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10413","24x24":"https://jooladen.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10413?size=small","16x16":"https://jooladen.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10413?size=xsmall","32x32":"https://jooladen.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10413?size=medium"},"projectTypeKey":"software","simplified":false,"style":"classic","isPrivate":false,"properties":{}},{"expand":"description,lead,issueTypes,url,projectKeys,permissions,insight","self":"https://jooladen.atlassian.net/rest/api/3/project/10035","id":"10035","key":"SOK","name":"팀이름","avatarUrls":{"48x48":"https://jooladen.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10411","24x24":"https://jooladen.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10411?size=small","16x16":"https://jooladen.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10411?size=xsmall","32x32":"https://jooladen.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10411?size=medium"},"projectTypeKey":"software","simplified":true,"style":"next-gen","isPrivate":false,"properties":{},"entityId":"0d7c4d39-222e-40cc-9d92-7f41a50b89e6","uuid":"0d7c4d39-222e-40cc-9d92-7f41a50b89e6"}]}
+
+2. 이슈목록조회
+https://jooladen.atlassian.net/rest/api/3/search/jql?jql=project=SOK&fields=summary,status,assignee
+
+-- jql?jql=project=SOK&fields=*all
+
+{"issues":[{"id":"10070"},{"id":"10068"},{"id":"10066"},{"id":"10064"},{"id":"10062"},{"id":"10060"},{"id":"10058"},{"id":"10056"},{"id":"10054"},{"id":"10052"},{"id":"10050"},{"id":"10048"},{"id":"10046"},{"id":"10044"},{"id":"10042"},{"id":"10040"},{"id":"10038"},{"id":"10037"},{"id":"10036"},{"id":"10035"}],"isLast":true}
+
+
+3.
+특정이슈상세조회 (Get Issue)
+https://jooladen.atlassian.net/rest/api/3/issue/SOK-20
+
+https://jooladen.atlassian.net/rest/api/3/issue/SOK-20
+?fields=summary,status,assignee
+
+jooladen@gmail.com
+
+ATATT3xFfGF0lYIrn9DjVvj71H-DnZroS7o1c0k_NWdj_B9wE2yBzSDaqq5pMvMQG4_c_gokq-L9NspKyKlMeo8bJ7TqbTCVzZl6yhvNT0caY-yyLD-GfoJs22z8NWzexzcNxE0U3GK-FF80qHW880qoRczBAi3rJviXeHACAWC9-WslxTtedFI=156D78C3156
+
+--------------------------------------------------
+4. 
+이슈업데이트 (Update Issue)
+1)
+https://jooladen.atlassian.net/rest/api/3/issue/SOK-1
+
+🔹 너무 길면 줄여보기 (필드 제한)
+https://jooladen.atlassian.net/rest/api/3/issue/SOK-1?fields=summary,status,assignee
+
+2)
+예제 2 — 설명(Description) 수정 (가장 쉬움)
+PUT
+https://jooladen.atlassian.net/rest/api/3/issue/SOK-1
+
+Body → JSON
+{
+  "fields": {
+    "description": "Thunder Client로 설명 수정 테스트"
+  }
+}
+Atlassian Document Format (ADF) 이어야 함
+
+{
+  "fields": {
+    "description": {
+      "type": "doc",
+      "version": 1,
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Thunder Client로 설명 수정 테스트"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
+
+
+결과
+
+응답: 204 No Content
+
+UI 가서 보면 설명 바뀜 ✅
+
+3)
+예제 3 — 담당자 변경 (실무 핵심)
+1️⃣ accountId 먼저 조회 (본인)
+GET
+https://jooladen.atlassian.net/rest/api/3/myself
+
+
+응답에서:
+
+ "accountId": "5dba78711712930d3a9e9788",
+
+담당자 변경
+PUT
+https://jooladen.atlassian.net/rest/api/3/issue/SOK-1
+
+실패
+{
+  "fields": {
+    "assignee": {
+      "accountId": "abcd1234..."
+    }
+  }
+}
+
+
+------------------------------------------------------------
+
+5.
+이슈링크정보 수정 (Issue Link)
+outward = 막는 놈
+inward = 막힌 놈
+
+목표
+회원가입 blocks 로그인
+
+API Body (정답)
+{
+  "type": { "name": "Blocks" },
+  "outwardIssue": { "key": "SOK-2" },
+  "inwardIssue": { "key": "SOK-1" }
+}
+
+읽는 법
+SOK-2 (회원가입) blocks SOK-1 (로그인)
