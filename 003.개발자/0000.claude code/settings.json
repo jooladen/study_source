@@ -1,0 +1,24 @@
+{
+  "model": "sonnet",
+  "env": {
+    "_comment": "MCP Tool Search - 아래 수치는 %",
+    "ENABLE_TOOL_SEARCH": "auto:9"
+  },
+  "permissions": {
+    "allow": [
+      "Bash",
+      "Read",
+      "Edit",
+      "Write",
+      "WebSearch",
+      "WebFetch"
+    ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "node C:/Users/jooladen/.claude/statusline.js",
+    "command__": "node .claude/statusline.js",
+    "command_": "powershell.exe -NoProfile -Command \"$j = $input | ConvertFrom-Json; $g = git rev-parse --abbrev-ref HEAD 2>$null; $c = if ($r = $j.context_window.remaining_percentage) { '{0:N1}%' -f $r } else { 'N/A' }; $t = if ($j.context_window.remaining_tokens) { '({0}k)' -f [math]::Round($j.context_window.remaining_tokens/1000,1) } else { '' }; Write-Host \"[$($j.model.display_name)] $(Split-Path -Leaf $j.workspace.current_dir) $(if ($g) {\"($g)\"}) - $($j.output_style.name) - $c $t\" -ForegroundColor Cyan\""
+  },
+  "outputStyle_": "Learning"
+}
